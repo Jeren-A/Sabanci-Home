@@ -94,7 +94,7 @@ CREATE TABLE ChunkSolveStatus (
   `status` VARCHAR(20),
   last_changed_at DATE,
   PRIMARY KEY (chunkId),
-  FOREIGN KEY (comp_id) REFERENCES Computer (comp_id) ON DELETE SET NULL
+  FOREIGN KEY (comp_id) REFERENCES Computer (comp_id) ON DELETE SET NULL,
   FOREIGN KEY (chunk_id) REFERENCES Chunk (chunk_id) ON DELETE CASCADE
 );
 
