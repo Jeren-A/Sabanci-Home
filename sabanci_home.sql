@@ -23,7 +23,7 @@ CREATE TABLE Chunk (
     chunk_id INT NOT NULL,
     weight VARCHAR(20) NOT NULL,
     description VARCHAR(16),
-    -- Will add a andaddress system for files
+    -- Will add an address system for files
     PRIMARY KEY (chunk_id)
 );
 
@@ -39,13 +39,14 @@ CREATE TABLE Customer (
 );
 
 CREATE TABLE Donator (
-    user_id INT(5) NOT NULL,
+    user_id INT NOT NULL,
     email VARCHAR(50),
     passphrase VARCHAR(50),
     display_name VARCHAR(100),
-    business_type VARCHAR(200),
-    flop_demand INT(20),
-    problem_count INT(5),
+    none_profit INT,
+    for_profit INT,
+    total_flops INT,
+    computer_count INT,
     PRIMARY KEY(user_id)
 );
 
@@ -53,7 +54,6 @@ CREATE TABLE Computer (
     comp_id INT AUTO_INCREMENT,
     core_count INT NOT NULL,
     gpu_core_count INT DEFAULT 0,
-    add_more INT,
     PRIMARY KEY (comp_id)
 );
 
@@ -89,12 +89,13 @@ CREATE TABLE CustomerProblem (
 );
 
 CREATE TABLE ChunkSolveStatus (
-  compId INTEGER NOT NULL,
-  chunkId INTEGER,
+  comp_id INTEGER NOT NULL,
+  chunk_id INTEGER,
   `status` VARCHAR(20),
   last_changed_at DATE,
   PRIMARY KEY (chunkId),
-  FOREIGN KEY (chunkId) REFERENCES Chunk (chunk_id) ON DELETE CASCADE
+  FOREIGN KEY (comp_id) REFERENCES Computer (comp_id) ON DELETE SET NULL
+  FOREIGN KEY (chunk_id) REFERENCES Chunk (chunk_id) ON DELETE CASCADE
 );
 
 CREATE TABLE DonatorComputer (
