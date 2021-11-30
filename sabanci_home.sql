@@ -13,14 +13,14 @@ DROP TABLE IF EXISTS ChunkSolveStatus;
 DROP TABLE IF EXISTS DonatorComputer;
 
 CREATE TABLE Problem (
-    problem_id INT,
+    problem_id INTNOT NULL AUTO_INCREMENT,
     problem_name VARCHAR(200) NOT NULL,
     weight VARCHAR(20) NOT NULL DEFAULT 'easy',
     PRIMARY KEY(problem_id)
 );
 
 CREATE TABLE Chunk (
-    chunk_id INT NOT NULL,
+    chunk_id INT NOT NULL AUTO_INCREMENT,
     weight VARCHAR(20) NOT NULL,
     description VARCHAR(16),
     -- Will add an address system for files
@@ -28,7 +28,7 @@ CREATE TABLE Chunk (
 );
 
 CREATE TABLE Customer (
-    user_id INT NOT NULL,
+    user_id INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(50),
     passphrase VARCHAR(50),
     display_name VARCHAR(100),
@@ -39,7 +39,7 @@ CREATE TABLE Customer (
 );
 
 CREATE TABLE Donator (
-    user_id INT NOT NULL,
+    user_id INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(50),
     passphrase VARCHAR(50),
     display_name VARCHAR(100),
@@ -51,7 +51,7 @@ CREATE TABLE Donator (
 );
 
 CREATE TABLE Computer (
-    comp_id INT AUTO_INCREMENT,
+    comp_id INT NOT NULL AUTO_INCREMENT,
     core_count INT NOT NULL,
     gpu_core_count INT DEFAULT 0,
     PRIMARY KEY (comp_id)
