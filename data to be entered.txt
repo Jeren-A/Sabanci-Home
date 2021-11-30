@@ -1,0 +1,25 @@
+Customer Table
+Google@google.com Don’tBeEvil Google For_Profit 10000000 1
+intel@silicon.com intel4004mybeloved Intel For_Profit 10000 1
+cat@tractor.org MyExcavator>YourExcavator CAT For_Profit 1000000 1
+Tencent@prc.gov "94Fhr4ndf'fQb+~ TENCENT Non_Profit 1000000 1
+barbie@dreams.org MommaNeedsATank BarbieDollCompany Non_Profit 100000 1
+
+
+CustomerProblem and problem table Because we probably need to add to them both, not sure how the autoincrement works, starts from 01 right?
+customer_id problem_id date_posted deadline problem_name weight
+01 01 01.01.1970 01.01.1970 DataCrunchGmail High
+02 02 01.01.1970 01.01.1970 LUTOptIntel Low
+03 03 01.01.1970 01.01.1970 StrengthCalcMega2 Medium
+04 04 01.01.1970 01.01.1970 TencentProject1 Low
+05 05 01.01.1970 01.01.1970 TotallyNotAPinkTank Very_High
+
+Problem Chunk
+
+
+
+Chunk
+
+
+
+
