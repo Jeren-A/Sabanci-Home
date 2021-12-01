@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS ChunkSolveStatus;
 DROP TABLE IF EXISTS DonatorComputer;
 
 CREATE TABLE Problem (
-    problem_id INTNOT NULL AUTO_INCREMENT,
+    problem_id INT NOT NULL AUTO_INCREMENT,
     problem_name VARCHAR(200) NOT NULL,
     weight VARCHAR(20) NOT NULL DEFAULT 'easy',
     PRIMARY KEY(problem_id)
