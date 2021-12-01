@@ -1,37 +1,46 @@
-<?php 
+<?php
 
-include "config.php"; 
+include "config.php";
+include "header.php";
 
-if (!empty($_POST['email'])){ 
-    $user_id= $_POST['user_id'];
-    $passphrase = $_POST['passphrase']; 
-    $display_name = $_POST['display_name']; 
-    $email = $_POST['email']; 
-    $business_type = $_POST['business_type']; 
-    $flop_demand = $_POST['flop_demand']; 
-    $problem_count = $_POST['problem_count']; 
-    $sql_statement = "INSERT INTO `customer` (`user_id`, `email`, `passphrase`, `display_name`, `business_type`, `flop_demand`, `problem_count`) VALUES ('$user_id', '$email','$passphrase','$display_name','$business_type','$flop_demand','$problem_count')"; 
-    //echo $sql_statement;
-    $result = mysqli_query($db, $sql_statement);
-    //echo $result;
-    if($result){
-        echo "Insert Successful";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!empty($_POST['email'])) {
+        $passphrase = $_POST['passphrase'];
+        $display_name = $_POST['display_name'];
+        $email = $_POST['email'];
+        $business_type = $_POST['business_type'];
+        $flop_demand = 0;
+        $problem_count = 0;
+        $sql_statement = "INSERT INTO `customer` (`email`, `passphrase`, `display_name`, `business_type`, `flop_demand`, `problem_count`) VALUES ('$email','$passphrase','$display_name','$business_type','$flop_demand','$problem_count')";
+        $result = mysqli_query($db, $sql_statement);
+        if ($result) {
+            echo "<a href=\"customers.php\">Succesful! Return back</a>";
+        }
+    } else {
+        echo "Failed to reach insert requirement.";
     }
-} 
-else 
-{
-    echo "Failed to reach insert requirement.";
 }
 
-
 ?>
-<!-- this is the from you can add to the main page (INDEX) for this insert
-<form action="inserttemplate.php" method="POST"> 
-    First Column: 
-    <input type="text" id="columnname" name="columnname"> 
-    Second Column: 
-    <input type="text" id="columnname" name="columnname">
-    Third Column: <input type="text" id="columnname" name="column name">
-    <input type="submit" value="Submit"> 
-</form> 
--->
+
+<form class="form-control" id="form" action="insertcustomer.php" method="POST">
+    email:
+    <input type="text" class="form-control" id="email" name="email">
+    <br />
+    passphrase:
+    <input type="password" class="form-control" id="passphrase" name="passphrase">
+    <br />
+    display_name:
+    <input type="text" class="form-control" id="display_name" name="display_name">
+    <br />
+    business_type:
+    <input type="text" class="form-control" id="business_type" name="business_type">
+    <br />
+    flop_demand:
+    <input type="number" class="form-control" id="flop_demand" name="flop_demand">
+    <br />
+    problem_count:
+    <input type="number" class="form-control" id="problem_count" name="problem_count">
+    <br />
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
