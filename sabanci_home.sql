@@ -84,8 +84,8 @@ CREATE TABLE CustomerProblem (
     date_posted VARCHAR(10) NOT NULL,
     deadline VARCHAR(10) NOT NULL,
     PRIMARY KEY(problem_id),
-    FOREIGN KEY(customer_id) REFERENCES Customer (user_id) ON DELETE CASCADE ON UPDATE NO ACTION,
-    FOREIGN KEY(problem_id) REFERENCES Problem (problem_id) ON DELETE CASCADE ON UPDATE NO ACTION
+    FOREIGN KEY(customer_id) REFERENCES Customer (user_id) ON DELETE CASCADE,
+    FOREIGN KEY(problem_id) REFERENCES Problem (problem_id) ON DELETE CASCADE
 );
 
 CREATE TABLE ChunkSolveStatus (
