@@ -64,6 +64,8 @@ Here is the our messages in our database:
 <br>
 
 <form action="insertcustomer.php" method="POST"> 
+    Id (you can leave this empty for an automatic Id, it is here for debug purposes): 
+    <input type="text" id="user_id" name="user_id">
     email: 
     <input type="text" id="email" name="email"> 
     passphrase: 
@@ -76,7 +78,6 @@ Here is the our messages in our database:
     <input type="number" id="flop_demand" name="flop_demand">
     problem_count: 
     <input type="number" id="problem_count" name="problem_count">
-
     <input type="submit" value="Submit"> 
 </form> 
 
