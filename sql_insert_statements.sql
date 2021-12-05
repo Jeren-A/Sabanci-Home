@@ -15,23 +15,23 @@ INSERT INTO `problem` (`problem_id`, `problem_name`, `weight`) VALUES ('3', 'Str
 INSERT INTO `problem` (`problem_id`, `problem_name`, `weight`) VALUES ('4', 'TencentProject1', 'Low');
 INSERT INTO `problem` (`problem_id`, `problem_name`, `weight`) VALUES ('5', 'TotallyNot10000PinkTanks', 'Very_High');
 
-INSERT INTO `customerproblem` (`customer_id`, `problem_id`, `date_posted`, `deadline`) VALUES ('1', '1', '1.1.1970', '1.1.1970');
-INSERT INTO `customerproblem` (`customer_id`, `problem_id`, `date_posted`, `deadline`) VALUES ('2', '2', '1.1.1970', '1.1.1970');
-INSERT INTO `customerproblem` (`customer_id`, `problem_id`, `date_posted`, `deadline`) VALUES ('3', '3' ,'1.1.1970', '1.1.1970');
-INSERT INTO `customerproblem` (`customer_id`, `problem_id`, `date_posted`, `deadline`) VALUES ('4', '4', '1.1.1970', '1.1.1970');
-INSERT INTO `customerproblem` (`customer_id`, `problem_id`, `date_posted`, `deadline`) VALUES ('5', '5', '1.1.1970', '1.1.1970');
+INSERT INTO `customerproblem` (`customer_id`, `problem_id`) VALUES ('1', '1');
+INSERT INTO `customerproblem` (`customer_id`, `problem_id`) VALUES ('2', '2');
+INSERT INTO `customerproblem` (`customer_id`, `problem_id`) VALUES ('3', '3');
+INSERT INTO `customerproblem` (`customer_id`, `problem_id`) VALUES ('4', '4');
+INSERT INTO `customerproblem` (`customer_id`, `problem_id`) VALUES ('5', '5');
 
 
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('1', 'easy', 'Analyzation');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('2', 'easy', 'Tokenization');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('3', 'easy', 'Classic2DbinPackingX');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('4', 'easy', 'Classic2DbinPackingY');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('5', 'easy', 'StrengthAnalExcatorArm');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('6', 'easy', 'StrengthAnalAxel');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('7', 'easy', 'Chunk1');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('8', 'easy', 'Chunk2');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('9', 'easy', 'TorpedoShellSim');
-INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('10', 'easy', 'FullRenderArmy');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('1', 'Low', 'Analyzation');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('2', 'Low', 'Tokenization');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('3', 'Low', 'Classic2DbinPackingX');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('4', 'Low', 'Classic2DbinPackingY');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('5', 'Low', 'StrengthAnalExcatorArm');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('6', 'Low', 'StrengthAnalAxel');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('7', 'Low', 'Chunk1');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('8', 'Low', 'Chunk2');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('9', 'Low', 'TorpedoShellSim');
+INSERT INTO `chunk` (`chunk_id`, `weight`, `description`) VALUES ('10', 'Low', 'FullRenderArmy');
 
 
 INSERT INTO `problemchunk` (`problem_id`, `chunk_id`) VALUES ('1', '1');
